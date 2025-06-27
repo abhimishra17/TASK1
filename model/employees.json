@@ -1,0 +1,29 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "Abhishek",
+      "department": "IT"
+    },
+    {
+      "id": "2",
+      "name": "Aditya",
+      "department": "IT"
+    },
+    {
+      "id": "3",
+      "name": "Ayush",
+      "department": "HR"
+    },
+    {
+      "id": "4",
+      "name": "Aryan",
+      "department": "Finance"
+    },
+    {
+      "id": "5",
+      "name": "Naman",
+      "department": "Finance"
+    }
+  ]
+}

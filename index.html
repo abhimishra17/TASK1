@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Manager</title>
+  <script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+    id="sap-ui-bootstrap"
+    data-sap-ui-theme="sap_fiori_3"
+    data-sap-ui-libs="sap.m"
+    data-sap-ui-resourceroots='{"employeemanager": "./"}'>
+  </script>
+  <script>
+    sap.ui.getCore().attachInit(function () {
+      new sap.ui.core.ComponentContainer({
+        name: "employeemanager"
+      }).placeAt("content");
+    });
+  </script>
+</head>
+<body class="sapUiBody" id="content"></body>
+</html>

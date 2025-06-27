@@ -1,0 +1,43 @@
+{
+  "sap.app": {
+    "id": "employeemanager",
+    "type": "application",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "i18n": "i18n/i18n.properties"
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "employeemanager.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.60",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "models": {
+      "": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/employees.json"
+      },
+      "i18n": {
+    "type": "sap.ui.model.resource.ResourceModel",
+    "settings": {
+      "bundleUrl": "i18n/i18n.properties"
+    }
+  }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    }
+  }
+}

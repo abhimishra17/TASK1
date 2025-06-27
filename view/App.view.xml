@@ -1,0 +1,55 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  controllerName="employeemanager.controller.App">
+  
+  <VBox>
+    <HBox>
+      <SearchField 
+        placeholder="{i18n>searchPlaceholder}"
+        liveChange="onSearch"
+        width="50%"/>
+      <Select
+        change="onFilter">
+        <items>
+          <core:Item key="" text="{i18n>filterAll}"/>
+
+          <core:Item key="HR" text="{i18n>filterHR}"/>
+
+          <core:Item key="IT" text="{i18n>filterIT}"/>
+
+          <core:Item key="Finance" text="{i18n>filterFinance}"/>
+        </items>
+      </Select>
+      <Button text="{i18n>btnAdd}" press="onAdd" />
+    </HBox>
+    
+    <Table id="employeeTable" items="{/employees}" editable="true">
+      <columns>
+        <Column><Text text="{i18n>idColumn}"/></Column>
+        <Column><Text text="{i18n>nameColumn}"/></Column>
+        <Column><Text text="{i18n>departmentColumn}"/></Column>
+        <Column><Text text="{i18n>actionsColumn}"/></Column>
+      </columns>
+      <items>
+        <ColumnListItem>
+          <cells>
+            <Text 
+              text="{id}" 
+              class="{path: 'id', formatter: '.formatter.getClassById'}"/>
+
+            <Input value="{name}" />
+            <Input value="{department}"  
+            />
+            <HBox>
+              <Button icon="sap-icon://save" press="onSave" />
+              <Button icon="sap-icon://delete" press="onDelete" />
+            </HBox>
+          </cells>
+        </ColumnListItem>
+      </items>
+    </Table>
+  </VBox>
+</mvc:View>
+
